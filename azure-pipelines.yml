@@ -21,7 +21,7 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'test'
-    projects: '**/*Tests.csproj'
+    projects: '**/*tests.csproj'
     arguments: '--configuration $(BuildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=./coverage/opencover.xml'
     publishTestResults: false
 - task: DotNetCoreCLI@2
