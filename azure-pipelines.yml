@@ -35,3 +35,11 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
+
+- task: SonarCloudPrepare@1
+  inputs:
+    organization: 'BBR2394'
+    scannerMode: 'CLI'
+    configMode: 'manual'
+    cliProjectKey: 'DiwNeufOctobre'
+    cliSources: '.'
